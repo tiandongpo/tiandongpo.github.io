@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="MacTalk微信推送的文章我都读过，结册成书后我又买下读了一遍。看过整册后，我竟然产生了一种“敬畏感”。 这种敬畏感源自我心中对“写了十几年代码的程序员”这样头衔的赞叹和崇拜——每一个写了十几年代码的程序员都是一本书。 我也差点儿能成为一个“老程序员”，我父亲该算是国内第一代程序员，我出生时他在一所大学教编程，而我母亲当时在另一所大学教统计。诞生在这样的一个家庭，我几乎在育婴室就被贴上了“很可能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="莫问前程">
+<meta property="og:url" content="http://yoursite.com/2019/05/01/莫问前程/index.html">
+<meta property="og:site_name" content="人间值得，未来可期">
+<meta property="og:description" content="MacTalk微信推送的文章我都读过，结册成书后我又买下读了一遍。看过整册后，我竟然产生了一种“敬畏感”。 这种敬畏感源自我心中对“写了十几年代码的程序员”这样头衔的赞叹和崇拜——每一个写了十几年代码的程序员都是一本书。 我也差点儿能成为一个“老程序员”，我父亲该算是国内第一代程序员，我出生时他在一所大学教编程，而我母亲当时在另一所大学教统计。诞生在这样的一个家庭，我几乎在育婴室就被贴上了“很可能">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-30T20:02:58.720Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="莫问前程">
+<meta name="twitter:description" content="MacTalk微信推送的文章我都读过，结册成书后我又买下读了一遍。看过整册后，我竟然产生了一种“敬畏感”。 这种敬畏感源自我心中对“写了十几年代码的程序员”这样头衔的赞叹和崇拜——每一个写了十几年代码的程序员都是一本书。 我也差点儿能成为一个“老程序员”，我父亲该算是国内第一代程序员，我出生时他在一所大学教编程，而我母亲当时在另一所大学教统计。诞生在这样的一个家庭，我几乎在育婴室就被贴上了“很可能">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/01/莫问前程/">
+
+
+
+
+
+  <title>莫问前程 | 人间值得，未来可期</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">人间值得，未来可期</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            给我留言
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/01/莫问前程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="田东坡">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://imgsrc.baidu.com/forum/pic/item/c5601fd9f2d3572c8026949f8413632760d0c3db.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="人间值得，未来可期">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">莫问前程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-01T04:02:45+08:00">
+                2019-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>MacTalk微信推送的文章我都读过，结册成书后我又买下读了一遍。看过整册后，我竟然产生了一种“敬畏感”。</p>
+<p>这种敬畏感源自我心中对“写了十几年代码的程序员”这样头衔的赞叹和崇拜——每一个写了十几年代码的程序员都是一本书。</p>
+<p>我也差点儿能成为一个“老程序员”，我父亲该算是国内第一代程序员，我出生时他在一所大学教编程，而我母亲当时在另一所大学教统计。诞生在这样的一个家庭，我几乎在育婴室就被贴上了“很可能会是个码农，请注意安全”的标签，接生的护士说这小宝贝好可爱，来给姐姐笑一个，笑，笑，你特么倒是笑啊，我冷漠而淡淡地回应，badcommandorfilename。</p>
+<p>我曾有过在短时间内带着极大的心理压力，以极大的工作量写代码的经历，我甚至不太敢回忆那时的感受。我知道那种长时间面对一台机器的冰冷和绝望。机器没有感情，它执行你要求的每一句逻辑，你对它没什么脾气，因为起承转合都来自于你的编排，机器只是精确执行。</p>
+<p>有人评价程序员说他们“成天跟机器打交道”，别闹了，电脑才不会跟人打交道，在这台坚硬的机器前，一切喜怒哀惧都是程序员心中的自言自语。</p>
+<p>于是很多人觉得程序员很可怜，木讷、神经质、不善交际、不修边幅，嘲笑程序员的段子足够装一火车。我听到不少姑娘偷偷地跟自己的闺密说“别嫁程序员，没情趣”，或者“嫁个程序员，老实有钱死的早”.</p>
+<p>在这种诡异的环境中，很多程序员都在“转型”和“突破”，做产品，做运营，做职业吹货，他们想办法甩开“做技术的”或“写代码的”标签。我不止一次听到“程序员是吃青春饭，你还是得赶紧转型”这样的所谓前辈忠告。</p>
+<p>如此背景之下，“一个写了十年代码的老程序员”头衔的背后，似乎一定有一曲二胡拉就的挽歌，你忍不住掏出纸巾想递给对面已经年逾不惑的他，伸手叫服务员“再上一箱啤酒，冰的”，你悲怆，你泣涕涟涟，你起好了范儿，准备听他开讲。</p>
+<p>结果他一开口，竟然是……</p>
+<p>活泼幽默轻松直率荤素搭配清爽可口。</p>
+<p>“可是船长，这明明是一场悲剧，你笑什么呢？”</p>
+<p>“谁特么说这是一场悲剧了”</p>
+<p>这本书就是这样一个老程序员哼的这样一段小曲儿。端起来有很多技术性文章，放下去有嬉笑怒骂和语重心长。</p>
+<p>当然了书名叫做MacTalk，自然有不少Mac技巧。看得出他对苹果情有独钟，书中开篇就是Mac的历史和故事。他还有一篇被广泛转载的“趣谈个人建站”，细致到代码级别。他还写人，写书评，说是书评，实则是自省、梳理和复盘，他读《黑客与画家》，势必跟我这个只写过几行代码的产品狗读起来深度不同，我喜欢他那篇书评。</p>
+<p>他有代码情结，感觉就是随便一撩动，他就马上坐那儿不起来非要给你写上一段儿，还拉着你让你看他写，你瞅瞅书中字里行间那些代码，像着了魔似的。</p>
+<p>书里我最喜欢的一篇文章是《人生元编程》，他做了一个跨度非常大的类比，用元编程的思想类比人生，那段时间我正在看《自私的基因》，我在这三个概念中间也找到了些似是而非的暗合。</p>
+<p>我觉得这篇东西是程序员用程序机制思考人生的一个缩影（当然了书里还有些其他的缩影比如并发什么的），如果你只是一个把堆代码当差事的程序员，我特别推荐你看看这一系列文章，它们或许会帮你打开一扇门，看看这种奇异的关联。</p>
+<p>比如你可以在爱情中拒绝GC，自己照顾（takecare）你的每一段回忆（memory），多浪漫啊。</p>
+<p>他认同对他文笔“相对轻松温和”的评价，他说自己在网际多年看惯了刀锋和鲜血，所以他不愿意参与或挑起争端。但我不同意他的文笔“温和”，我觉得不温和，而且挺有情绪的。有情绪的文章读起来像作者在跟你聊天儿，也很容易有代入感，是好事儿。</p>
+<p>最后想提一下这本书的价格，这本书现在卖2块9毛9，之前经常有人跟我抱怨推荐的书太贵，买不起。这本……应该，还好吧。</p>
+<p>这本书有52篇文章（其中还有130个MacTips），平均每篇文章5分多钱，真是卖得够贱的，要说作者好歹也是正儿八经一个帝都仔，到底图了个啥？他在序言里是这样回答这个问题的——“但行好事，莫问前程”，我特么太喜欢这句话了！</p>
+<p>我想把它送给每一个在深夜烧烤摊前黯然神伤的人们，精于算计的人们，小心翼翼的人们，举轻若重的人们，当然也包括我自己——但行好事，去特么的前程。</p>
+<p>泰山崩于前，我依然沐浴更衣焚香沏茶，诚心正意，手起键落<br>HelloWorld!</p>
+
+      
+    </div>
+    
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="田东坡 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="田东坡 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+   <div id="gitalk-container">
+   </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://imgsrc.baidu.com/forum/pic/item/c5601fd9f2d3572c8026949f8413632760d0c3db.jpg" alt="田东坡">
+            
+              <p class="site-author-name" itemprop="name">田东坡</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/tiandongpo" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/tian-dong-po/activities" target="_blank" title="ZhiHu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>ZhiHu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">田东坡</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+<!--  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script src="/js/src/md5.min.js"></script>
+
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '699e9eb43c3d2e239139',
+          clientSecret: '5a5624c569df22b52775c380a65304f10e39e9da',
+          repo: 'comment',
+          owner: 'tiandongpo',
+          admin: ['tiandongpo'],
+
+          id: md5(location.pathname),
+
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')
+    </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
