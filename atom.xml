@@ -6,10 +6,25 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-30T20:02:58.720Z</updated>
+  <updated>2019-10-08T15:06:25.461Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开始写博客啦</title>
+    <link href="http://yoursite.com/2019/10/08/%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2%E5%95%A6/"/>
+    <id>http://yoursite.com/2019/10/08/开始写博客啦/</id>
+    <published>2019-10-08T15:06:25.000Z</published>
+    <updated>2019-10-08T15:06:25.461Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>莫问前程</title>
