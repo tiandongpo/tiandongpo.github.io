@@ -6,10 +6,33 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-13T09:26:39.642Z</updated>
+  <updated>2019-10-18T15:23:16.580Z</updated>
   <id>http://yoursite.com/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>持续学习</title>
+    <link href="http://yoursite.com/2019/10/18/%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2019/10/18/持续学习/</id>
+    <published>2019-10-18T15:23:04.000Z</published>
+    <updated>2019-10-18T15:23:16.580Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/学习.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/学习.png&quot; alt&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>来嘛，励志语句</title>
