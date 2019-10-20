@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>人间值得，未来可期</title>
+  <title>无敌大土豆</title>
   
-  
+  <subtitle>人间值得，未来可期</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
   <updated>2019-10-18T16:04:31.894Z</updated>
   <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>炒鸡无敌土豆片</name>
+    
+  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
