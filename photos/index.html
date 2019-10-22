@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="无敌大土豆">
 <meta property="og:description" content="Photos              相册        视频        图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagNa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-22T15:42:28.242Z">
+<meta property="og:updated_time" content="2019-10-22T15:43:57.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="照片">
 <meta name="twitter:description" content="Photos              相册        视频        图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagNa">
@@ -402,6 +402,20 @@
         loadScript('../lib/album/ins.js')
     }, 0)
   })()
+
+   function to_vlog(){
+        document.getElementById('1').style.display='none';
+        document.getElementById('2').style.display='block';
+        document.getElementById('li_vlog').setAttribute('class','active');
+        document.getElementById('li_album').setAttribute('class','');
+    }
+
+    function to_album(){
+        document.getElementById('1').style.display='block';
+        document.getElementById('2').style.display='none';
+        document.getElementById('li_album').setAttribute('class','active');
+        document.getElementById('li_vlog').setAttribute('class','');
+    }
 </script>
         
       </div>
