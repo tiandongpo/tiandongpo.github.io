@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>http://yoursite.com/photos/</loc>
+        <lastmod>2019-10-22T15:31:19.142Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://yoursite.com/guestbook/</loc>
         <lastmod>2019-10-20T17:04:47.066Z</lastmod>
         <changefreq>weekly</changefreq>
