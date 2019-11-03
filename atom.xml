@@ -128,16 +128,16 @@
     <link href="http://yoursite.com/2019/10/08/%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2%E5%95%A6/"/>
     <id>http://yoursite.com/2019/10/08/开始写博客啦/</id>
     <published>2019-10-08T15:06:25.000Z</published>
-    <updated>2019-11-03T09:29:11.349Z</updated>
+    <updated>2019-11-03T09:38:13.036Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/start2.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/start2.png" width="900" height="600" alt="git" align="center"></p><p><img src="https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/start2.png" alt></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/start2.png&quot; alt&gt;&lt;/p&gt;
-
+        &lt;p&gt;&lt;img src=&quot;https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/start2.png&quot; width=&quot;900&quot; height=&quot;600&quot; alt=&quot;git&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
       
     
     </summary>

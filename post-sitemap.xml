@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2019/10/08/%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2%E5%95%A6/</loc>
+        <lastmod>2019-11-03T09:38:13.036Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2019/10/11/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E8%8B%A6%E9%9A%BE%E4%B8%8E%E4%B8%AA%E4%BA%BA%E5%A5%8B%E6%96%97%E7%9A%84%E6%84%8F%E4%B9%89/</loc>
         <lastmod>2019-11-03T09:29:55.958Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -34,14 +42,6 @@
     <url>
         <loc>http://yoursite.com/2019/10/13/%E6%9D%A5%E5%98%9B%EF%BC%8C%E5%8A%B1%E5%BF%97%E8%AF%AD%E5%8F%A5/</loc>
         <lastmod>2019-11-03T09:29:20.344Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2019/10/08/%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2%E5%95%A6/</loc>
-        <lastmod>2019-11-03T09:29:11.349Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
