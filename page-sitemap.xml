@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>http://yoursite.com/pdf/</loc>
+        <lastmod>2019-11-03T13:37:38.798Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://yoursite.com/about/</loc>
         <lastmod>2019-11-03T09:45:32.937Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -31,13 +38,6 @@
     <url>
         <loc>http://yoursite.com/guestbook/</loc>
         <lastmod>2019-10-20T17:04:47.066Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://yoursite.com/pdf/</loc>
-        <lastmod>2019-10-20T16:43:53.211Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
