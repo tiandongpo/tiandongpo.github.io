@@ -2003,7 +2003,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aa3312;
+  background: #9f9cff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3095,13 +3095,4 @@ hr {
 }
 img.img-topic {
   width: 100%;
-}
-@media screen and (min-width: 1200px) {
-  body {
-    background-color: #fff;
-    background-image: url("/image/background.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-  }
 }
