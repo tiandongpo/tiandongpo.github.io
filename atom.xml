@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-03T09:46:16.290Z</updated>
+  <updated>2019-11-03T09:48:40.288Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>持续学习</title>
+    <link href="http://yoursite.com/2019/10/18/%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2019/10/18/持续学习/</id>
+    <published>2019-10-18T15:23:04.000Z</published>
+    <updated>2019-11-03T09:48:40.288Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/学习.png" alt></p><a id="more"></a><p><a href="http://blog.itpub.net/6517/viewspace-611506/" target="_blank" rel="noopener">程序员的十层楼（十种境界）</a></p><p><a href="https://blog.csdn.net/happydeer/article/details/8107560" target="_blank" rel="noopener">程序员的八种境界</a></p><p><a href="http://lucida.me/blog/levels-on-learning-and-using-technologies/" target="_blank" rel="noopener">学习 &amp; 使用技术的四种层次</a></p><p><a href="http://lucida.me/blog/developer-reading-list/#mastery" target="_blank" rel="noopener">程序员必读书单 1.0</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/学习.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>来嘛，励志语句</title>
@@ -42,7 +61,7 @@
     <link href="http://yoursite.com/2019/10/13/2019%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2019/10/13/2019工作经验总结/</id>
     <published>2019-10-13T07:15:24.000Z</published>
-    <updated>2019-11-03T09:46:34.087Z</updated>
+    <updated>2019-11-03T09:48:19.899Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/smile_girl.png" alt></p><a id="more"></a><p>已经工作四年了，突然想起总结回顾下这四年的经历。 刚毕业时，找工作连续受挫，感受到社招的打压，随便找了家要求低的公司说是准备混点经验攒点钱就走的，没想到一呆就是这么久。四年间做过不少项目，换了三个项目组，感悟颇多，收获颇多。</p><table><thead><tr><th>刚毕业时</th><th>工作四年后</th></tr></thead><tbody><tr><td></td><td></td></tr><tr><td>做项目不擅长交流。有疑问不主动去问同事，害怕自己打扰到别人。</td><td></td></tr><tr><td>闷头做需求，也不管做出来对不对。</td><td></td></tr><tr><td>领导分配任务后，不懂得收集历史经验，从零开始做，还希望一次做对得到PM赞赏。</td><td></td></tr><tr><td>项目过程中遇到问题不主动求助，完成任务后未及时知会周边</td><td></td></tr><tr><td>没有良好的时间管理观念，项目经常延期且质量无法保证。</td><td></td></tr><tr><td>有点自卑，自尊心强，害怕别人说自己的闲话，怕别人觉得自己能力差，不注重实力提升，喜欢装B，通过打压别人显示自己很厉害，崇尚语言暴力。</td><td></td></tr><tr><td>不喜欢为自己的利益争取，不能主动抓住机遇，觉得自己配不上优秀的人或者物品。</td><td></td></tr><tr><td>未能坚持持续学习，不能在权威面前表达自己的观点。不擅长主动找主管沟通，希望得到主动关注。</td><td></td></tr><tr><td>工作有点没安全感，喜欢提主管操心显示自己在专心工作。让主管延误，自己失去也做不好。</td><td></td></tr><tr><td>喜欢特立独行，标新立异，与众不同。</td><td></td></tr><tr><td>过于为别人考虑，优柔寡断，害怕在公众场合表现自己。</td><td></td></tr><tr><td>不注意卫生，关注形象。</td><td></td></tr><tr><td>喜欢打游戏，看视频浪费时间。</td><td></td></tr><tr><td>未掌握科学的学习方法和自我注意力管理方式。</td><td></td></tr><tr><td>工作生活与学习生活目标感不强，缺乏机会感知能力。</td><td></td></tr><tr><td>对工作中的将要遇到的事情毫无准备，休息时间不注重自我提升。</td><td></td></tr></tbody></table>]]></content>
     
@@ -84,9 +103,9 @@
     <link href="http://yoursite.com/2019/10/08/%E5%BC%80%E5%A7%8B%E5%86%99%E5%8D%9A%E5%AE%A2%E5%95%A6/"/>
     <id>http://yoursite.com/2019/10/08/开始写博客啦/</id>
     <published>2019-10-08T15:06:25.000Z</published>
-    <updated>2019-11-03T09:46:10.259Z</updated>
+    <updated>2019-11-03T09:48:31.756Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/start2.png" alt></p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://tudou-1259141838.cos.ap-chengdu.myqcloud.com/img/start2.png" alt></p> <a id="more"></a>]]></content>
     
     <summary type="html">
     
