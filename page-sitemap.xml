@@ -8,6 +8,20 @@
     </url>
     
     <url>
+        <loc>http://yoursite.com/about/</loc>
+        <lastmod>2019-11-03T09:45:32.937Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://yoursite.com/tags/</loc>
+        <lastmod>2019-11-03T09:45:31.644Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://yoursite.com/photos/</loc>
         <lastmod>2019-11-03T03:27:21.537Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -22,13 +36,6 @@
     </url>
     
     <url>
-        <loc>http://yoursite.com/about/</loc>
-        <lastmod>2019-10-20T16:48:53.415Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
         <loc>http://yoursite.com/pdf/</loc>
         <lastmod>2019-10-20T16:43:53.211Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -38,13 +45,6 @@
     <url>
         <loc>http://yoursite.com/categories/</loc>
         <lastmod>2019-10-13T08:34:24.667Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://yoursite.com/tags/</loc>
-        <lastmod>2019-10-12T16:12:48.587Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
