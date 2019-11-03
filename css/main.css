@@ -2003,7 +2003,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #85a4f5;
+  background: #3d1b37;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3093,10 +3093,17 @@ hr {
     text-align: center;
   }
 }
-body {
-  background: url("/images/background.jpg");
-  background-attachment: fixed;
-}
 img.img-topic {
   width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("/image/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+  }
+  #footer a {
+    color: #eee;
+  }
 }
