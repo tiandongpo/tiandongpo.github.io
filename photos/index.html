@@ -103,17 +103,17 @@
 
 
 
-<meta name="description" content="Photos     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)       $s">
+<meta name="description" content="Photos              相册        视频        图片正在加载中…      2017_12_19_视频1    (function(){var player = new DPlayer({&quot;container&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;video&quot;:{&quot;url&quot;:">
 <meta property="og:type" content="website">
 <meta property="og:title" content="照片">
 <meta property="og:url" content="http://yoursite.com/photos/index.html">
 <meta property="og:site_name" content="无敌大土豆">
-<meta property="og:description" content="Photos     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)       $s">
+<meta property="og:description" content="Photos              相册        视频        图片正在加载中…      2017_12_19_视频1    (function(){var player = new DPlayer({&quot;container&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;video&quot;:{&quot;url&quot;:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-03T03:03:59.236Z">
+<meta property="og:updated_time" content="2019-11-03T03:08:08.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="照片">
-<meta name="twitter:description" content="Photos     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)       $s">
+<meta name="twitter:description" content="Photos              相册        视频        图片正在加载中…      2017_12_19_视频1    (function(){var player = new DPlayer({&quot;container&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;video&quot;:{&quot;url&quot;:">
 
 
 
@@ -159,7 +159,7 @@
 
 
 
-</head>
+<link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"><script src="/assets/js/DPlayer.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -382,9 +382,17 @@
         
           <p><link rel="stylesheet" href="../lib/album/ins.css"></p>
 <p><link rel="stylesheet" href="../lib/album/photoswipe.css"> </p>
-<link rel="stylesheet" href="../lib/album/default-skin/default-skin.css"> 
+<p><link rel="stylesheet" href="../lib/album/default-skin/default-skin.css"> </p>
+<link rel="stylesheet" href="../lib/vlog/css/style.css">
 
 <div class="photos-btn-wrap"><br>  <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Photos</a><br></div>
+
+<div><br>    <ul class="nav nav-tabs nav-justified" style="margin-top:-100px;"><br>        <li id="li_album" class="active"><a onclick="to_album()">相册</a></li><br>        <li id="li_vlog"><a onclick="to_vlog()">视频</a></li><br>    </ul><br></div>
+
+<div class="instagram itemscope"><br>  <a href="https://tiandongpo.github.io/" target="_blank" class="open-ins">图片正在加载中…</a><br></div>
+
+<div id="2" style="display:none; margin-top:-50px;"><br>    <center><b>2017_12_19_视频1</b></center><br>    <div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","video":{"url":"https://xxx.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><br>    <center><b>视频2</b></center><br>    <div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#FADFA3","video":{"url":"https://xxx.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><br></div>
+
 
 <script>
   (function() {
@@ -397,6 +405,20 @@
         loadScript('../lib/album/ins.js')
     }, 0)
   })()
+
+   function to_vlog(){
+        document.getElementById('1').style.display='none';
+        document.getElementById('2').style.display='block';
+        document.getElementById('li_vlog').setAttribute('class','active');
+        document.getElementById('li_album').setAttribute('class','');
+    }
+
+    function to_album(){
+        document.getElementById('1').style.display='block';
+        document.getElementById('2').style.display='none';
+        document.getElementById('li_album').setAttribute('class','active');
+        document.getElementById('li_vlog').setAttribute('class','');
+    }
 </script>
         
       </div>
