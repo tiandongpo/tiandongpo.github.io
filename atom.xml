@@ -40,8 +40,8 @@
   
   <entry>
     <title>linux_guide</title>
-    <link href="http://yoursite.com/2019/11/14/linux-guide/"/>
-    <id>http://yoursite.com/2019/11/14/linux-guide/</id>
+    <link href="http://yoursite.com/2019/11/14/%E5%B8%B8%E7%94%A8linux%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/11/14/常用linux操作/</id>
     <published>2019-11-14T11:57:20.000Z</published>
     <updated>2019-11-14T11:57:52.494Z</updated>
     
@@ -62,8 +62,8 @@
   
   <entry>
     <title>gdb_guide</title>
-    <link href="http://yoursite.com/2019/11/14/gdb-guide/"/>
-    <id>http://yoursite.com/2019/11/14/gdb-guide/</id>
+    <link href="http://yoursite.com/2019/11/14/%E5%B8%B8%E7%94%A8gdb%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/11/14/常用gdb操作/</id>
     <published>2019-11-14T11:54:26.000Z</published>
     <updated>2019-11-14T11:57:01.284Z</updated>
     

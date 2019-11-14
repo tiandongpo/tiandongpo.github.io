@@ -16,7 +16,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2019/11/14/linux-guide/</loc>
+        <loc>http://yoursite.com/2019/11/14/%E5%B8%B8%E7%94%A8linux%E6%93%8D%E4%BD%9C/</loc>
         <lastmod>2019-11-14T11:57:52.494Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -24,7 +24,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/2019/11/14/gdb-guide/</loc>
+        <loc>http://yoursite.com/2019/11/14/%E5%B8%B8%E7%94%A8gdb%E6%93%8D%E4%BD%9C/</loc>
         <lastmod>2019-11-14T11:57:01.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
