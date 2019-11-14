@@ -8,6 +8,30 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2019/11/14/%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/</loc>
+        <lastmod>2019-11-14T11:59:00.098Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2019/11/14/linux-guide/</loc>
+        <lastmod>2019-11-14T11:57:52.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2019/11/14/gdb-guide/</loc>
+        <lastmod>2019-11-14T11:57:01.284Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2019/10/11/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E8%8B%A6%E9%9A%BE%E4%B8%8E%E4%B8%AA%E4%BA%BA%E5%A5%8B%E6%96%97%E7%9A%84%E6%84%8F%E4%B9%89/</loc>
         <lastmod>2019-11-07T15:40:39.043Z</lastmod>
         <changefreq>weekly</changefreq>
