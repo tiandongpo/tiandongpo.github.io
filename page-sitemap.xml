@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>http://yoursite.com/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E8%8B%A6%E9%9A%BE%E4%B8%8E%E4%B8%AA%E4%BA%BA%E5%A5%8B%E6%96%97%E7%9A%84%E6%84%8F%E4%B9%89.html</loc>
+        <lastmod>2019-11-07T15:40:39.043Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://yoursite.com/pdf/</loc>
         <lastmod>2019-11-03T13:41:50.572Z</lastmod>
         <changefreq>weekly</changefreq>
