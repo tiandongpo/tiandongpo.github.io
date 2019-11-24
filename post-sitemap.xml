@@ -8,8 +8,24 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2019/11/23/cmake%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+        <lastmod>2019-11-23T15:40:51.074Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2019/10/13/2019%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/</loc>
+        <lastmod>2019-11-22T12:41:28.686Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2019/11/14/%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90/</loc>
-        <lastmod>2019-11-14T12:05:31.041Z</lastmod>
+        <lastmod>2019-11-14T13:49:48.823Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -42,14 +58,6 @@
     <url>
         <loc>http://yoursite.com/2019/10/18/%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0/</loc>
         <lastmod>2019-11-07T15:39:38.128Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2019/10/13/2019%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/</loc>
-        <lastmod>2019-11-03T16:36:37.881Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
