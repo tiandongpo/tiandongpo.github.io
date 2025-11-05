@@ -1,0 +1,4 @@
+[1020/234708:INFO:exception_record.cc(518)] [QB]Process ID: 14760 Type: 4
+[1021/030234:ERROR:browser_gpu_channel_host_factory.cc(119)] Failed to launch GPU process.
+[1114/205108:INFO:exception_record.cc(518)] [QB]Process ID: 1544 Type: 4
+[1114/214906:INFO:exception_record.cc(518)] [QB]Process ID: 15652 Type: 2
