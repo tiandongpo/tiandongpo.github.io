@@ -1,0 +1,133 @@
+/* 科技感主题样式 */
+:root {
+  --tech-primary: #00f5ff;
+  --tech-secondary: #ff2a6d;
+  --tech-accent: #00ff88;
+  --tech-bg: #0a0a0a;
+  --tech-card: #1a1a1a;
+  --tech-glow: 0 0 10px var(--tech-primary);
+}
+
+/* 科技感按钮 */
+.tech-btn-primary {
+  background: linear-gradient(45deg, var(--tech-primary), var(--tech-accent));
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: var(--tech-glow);
+}
+
+.tech-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--tech-primary);
+}
+
+.tech-btn-outline {
+  background: transparent;
+  border: 2px solid var(--tech-primary);
+  color: var(--tech-primary);
+  border-radius: 25px;
+  padding: 10px 28px;
+  transition: all 0.3s ease;
+}
+
+.tech-btn-outline:hover {
+  background: var(--tech-primary);
+  color: #000;
+  box-shadow: var(--tech-glow);
+}
+
+/* 科技感卡片 */
+.tech-card {
+  background: var(--tech-card);
+  border: 1px solid rgba(0, 245, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.tech-card:hover::before {
+  left: 100%;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--tech-primary);
+  box-shadow: var(--tech-glow);
+}
+
+/* 代码块科技感样式 */
+pre {
+  background: #1e1e1e !important;
+  border: 1px solid #333;
+  border-radius: 8px;
+  position: relative;
+}
+
+pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--tech-primary), var(--tech-secondary));
+}
+
+/* 导航栏科技感 */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 10, 0.9) !important;
+  border-bottom: 1px solid rgba(0, 245, 255, 0.2);
+}
+
+/* 进度条科技感 */
+.progress-bar {
+  background: linear-gradient(90deg, var(--tech-primary), var(--tech-accent));
+}
+
+/* 标签云科技感 */
+.tag-cloud-list a {
+  background: rgba(0, 245, 255, 0.1);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tag-cloud-list a:hover {
+  background: var(--tech-primary);
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* 科技感代码高亮 */
+.highlight {
+  background: #1a1a2e !important;
+  border-left: 4px solid var(--tech-primary);
+}
+
+code {
+  background: rgba(0, 245, 255, 0.1) !important;
+  color: var(--tech-primary) !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+}
