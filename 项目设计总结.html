@@ -1,0 +1,387 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>项目设计总结 | DongPo Blog</title><meta name="author" content="DongPo"><meta name="copyright" content="DongPo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="软件项目设计经验总结 一款软件产品的存在和广泛适用，在时间线上存在一个关键点。 软件设计的顶点是使用工具做工具(即定制化，只有我有。比如用QT做的软件做软件,需要注意文件的编码)。 后续将硬件学习定为目标，需要学历硬件发展历史和linux操作系统编程。  ## 一款优雅的产品，由本项目的制作过程学习到应该是硬件、底层软件、应用软件、UI、以及开发者使用的定位辅助工具组成。  * 一个成功的产品要当">
+<meta property="og:type" content="website">
+<meta property="og:title" content="项目设计总结">
+<meta property="og:url" content="http://tiandongpo.git.io/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1%E6%80%BB%E7%BB%93.html">
+<meta property="og:site_name" content="DongPo Blog">
+<meta property="og:description" content="软件项目设计经验总结 一款软件产品的存在和广泛适用，在时间线上存在一个关键点。 软件设计的顶点是使用工具做工具(即定制化，只有我有。比如用QT做的软件做软件,需要注意文件的编码)。 后续将硬件学习定为目标，需要学历硬件发展历史和linux操作系统编程。  ## 一款优雅的产品，由本项目的制作过程学习到应该是硬件、底层软件、应用软件、UI、以及开发者使用的定位辅助工具组成。  * 一个成功的产品要当">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://tiandongpo.git.io/image/avatar.png">
+<meta property="article:published_time" content="2025-11-07T13:01:01.000Z">
+<meta property="article:modified_time" content="2025-11-07T14:24:23.157Z">
+<meta property="article:author" content="DongPo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://tiandongpo.git.io/image/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://tiandongpo.git.io/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1%E6%80%BB%E7%BB%93.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '项目设计总结',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/portfolio/"><i class="fa-fw fas fa-briefcase"></i><span> 作品集</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/bg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">DongPo Blog</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/portfolio/"><i class="fa-fw fas fa-briefcase"></i><span> 作品集</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">项目设计总结</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><h1>软件项目设计经验总结</h1>
+<pre><code>一款软件产品的存在和广泛适用，在时间线上存在一个关键点。 软件设计的顶点是使用工具做工具(即定制化，只有我有。比如用QT做的软件做软件,需要注意文件的编码)。 后续将硬件学习定为目标，需要学历硬件发展历史和linux操作系统编程。
+
+## 一款优雅的产品，由本项目的制作过程学习到应该是硬件、底层软件、应用软件、UI、以及开发者使用的定位辅助工具组成。
+
+* 一个成功的产品要当成是有艺术感的作品来对待，不光要考虑到产品物理本身的美观、易用、可维护、可升级扩展以及最重要的长久使用周期，也即有持续市场和长远被需要。 
+
+* 底层软件是硬件厂商发布产品时伴随产品的官方接口。如果是自己生产的硬件，那么芯片支持的库和接口名称要合理合规，参数和返回值要能够满足特定标准，做到同类型产品能支持的运算和计算量要做到最低保障，还要扩展功能和优化扩展功能，并且要做到高级功能不会造成过度的性能开销。
+
+* 应用软件用于处理程序真实的数据输入。需要在逻辑计算层面上做到和硬件本身支持的最底层基础运算解耦，芯片只能处理官方定义和支持的运算，未被实现的计算和自定义算法应该在应用层使用计算机语言进行模拟近似运算，只要数据有效长度够，就能够得到足够精确度的计算结果。在这个应用软件设计过程中，如果要保证软件的稳定性和高效性能，需要做好内存管理、数据暂存。软件在运行过程中，要尽可能减少重复逻辑和已知结果的运算，以至于要尽可能做到产品越用越快越用越准。
+
+* UI是产品使用者能够直接感受到的软件形态，软件界面应该要满足业界通用软件设计规范，使得有任意可接受程度高的软件使用经验的能够猜测到软件的使用方法，满足傻瓜式操作。产品的设计要有合理的布局，比如满足对称、对齐、树形结构等。软件界面上的名称、图标、按钮、输入输出框、文本、颜色相关类、界面跳转等任意构成用户使用要素的上层产品元素都应该满足人眼的舒适性和操作的便利性。
+
+* 辅助定位工具是指在产品最终发布态时，如果要排查硬件环境损坏、芯片更换、输入数据非法、或者用户操作不符合预期等问题时，能够用于辅助定位相对应问题根本原因的工具。 包括硬件自测试脚本、读写硬件寄存器接口、应用层软件日志系统、用户操作异步或缺少互斥等。在软件研发初期可以在代码内部添加日志模块、包括故障修复提示的巡检模块、能够实时返回某个时间段的处理状态的命令等，用于软件开发初期的单元测试已及用户使用异常问题定位的高级手段。 而辅助工具即验证软件处理该模块最初数据和收到反馈的过程中，用于检测数据是否被合理正确的读写和运算。
+
+## 以刚刚做的超市折扣工具为例，分析设计过程中的重点操作和后续持续改进点。
+
+* 硬件： QT支持的平台较多，任意能跑windows、linux系列软件安装QT环境后，都能够跑QT发布的程序。需要注意研发QT的版本和程序运行设备上的版本是否匹配或者兼容。 超市结算机器属于嵌入式系统，在安装相关环境后也能够使用该套软件设计能够做更好功能更多的自定义收盈软件。
+
+* 底层软件： QT库、操作系统级别的系统接口、第三方平台库或自定义库。系统接口通常封装在system.h，第三方库需要安装对应模块，并修改编译工程的配置文件，自定义库的返回值类型要能够被接收模块处理。
+
+* 应用软件： 包括最重要的数据结构和算法，需要支持数据的计算机算法(查找、排序、递归、动态规划、贪心等只有计算机能做到的高性能业界通用算法)，自定义数据类型的高级数学运算要做到尽可能正确的运算，也要考虑通用软件编码规范和安全编码规范。
+
+* UI: 使用设计师软件最软件最终效果进行设计，对布局、美观、多页签等每个元素进行艺术化设计，对控件的像素和rgb要做到精确。五种通用计算机算法也可以迁移到UI设计上面。
+
+* 定位工具： 核心算法验证和界面软件验证要做到解耦，用于防治UI模块和应用软件模块数据处理和传输的不正确性。软件设计的四层接口都要做到类似的独立定位。
+</code></pre>
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/image/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">DongPo</div><div class="author-info-description">全栈开发者 | 技术博主</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" href="https://github.com/tiandongpo"><i class="fab fa-github"></i><span>联系我</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">人间值得，未来可期。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/11/09/%E4%BC%98%E6%83%A0%E5%8D%B7%E8%AE%A1%E7%AE%97%E5%B8%88%E8%BD%AF%E4%BB%B6%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C(%E5%9B%9B)/" title="优惠卷计算师软件最终GIF效果（四）"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/LiPao.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="优惠卷计算师软件最终GIF效果（四）"/></a><div class="content"><a class="title" href="/2025/11/09/%E4%BC%98%E6%83%A0%E5%8D%B7%E8%AE%A1%E7%AE%97%E5%B8%88%E8%BD%AF%E4%BB%B6%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C(%E5%9B%9B)/" title="优惠卷计算师软件最终GIF效果（四）">优惠卷计算师软件最终GIF效果（四）</a><time datetime="2025-11-09T04:36:23.000Z" title="发表于 2025-11-09 12:36:23">2025-11-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/06/%E4%BD%BF%E7%94%A8QT%E5%AE%9E%E7%8E%B0Figma%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E4%B8%89%EF%BC%89/" title="使用QT实现Figma设计的软件（三）"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/QTProject.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用QT实现Figma设计的软件（三）"/></a><div class="content"><a class="title" href="/2025/11/06/%E4%BD%BF%E7%94%A8QT%E5%AE%9E%E7%8E%B0Figma%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E4%B8%89%EF%BC%89/" title="使用QT实现Figma设计的软件（三）">使用QT实现Figma设计的软件（三）</a><time datetime="2025-11-06T15:39:39.000Z" title="发表于 2025-11-06 23:39:39">2025-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/06/%E4%BD%BF%E7%94%A8Figma%E7%BB%99%E8%B6%85%E5%B8%82%E4%BC%98%E6%83%A0%E5%8D%B7%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1UI%EF%BC%88%E4%BA%8C%EF%BC%89/" title="使用Figma给超市优惠卷算法设计UI（二）"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/Figma.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Figma给超市优惠卷算法设计UI（二）"/></a><div class="content"><a class="title" href="/2025/11/06/%E4%BD%BF%E7%94%A8Figma%E7%BB%99%E8%B6%85%E5%B8%82%E4%BC%98%E6%83%A0%E5%8D%B7%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1UI%EF%BC%88%E4%BA%8C%EF%BC%89/" title="使用Figma给超市优惠卷算法设计UI（二）">使用Figma给超市优惠卷算法设计UI（二）</a><time datetime="2025-11-06T14:08:57.000Z" title="发表于 2025-11-06 22:08:57">2025-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/06/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%B6%85%E5%B8%82%E4%BC%98%E6%83%A0%E5%8D%B7%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" title="做一个超市优惠卷使用的算法（一）"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/ZheKouJuan.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做一个超市优惠卷使用的算法（一）"/></a><div class="content"><a class="title" href="/2025/11/06/%E5%81%9A%E4%B8%80%E4%B8%AA%E8%B6%85%E5%B8%82%E4%BC%98%E6%83%A0%E5%8D%B7%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89/" title="做一个超市优惠卷使用的算法（一）">做一个超市优惠卷使用的算法（一）</a><time datetime="2025-11-06T13:21:59.000Z" title="发表于 2025-11-06 21:21:59">2025-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/05/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/" title="新的开始"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/XinDeKaiShi.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的开始"/></a><div class="content"><a class="title" href="/2025/11/05/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/" title="新的开始">新的开始</a><time datetime="2025-11-05T02:01:05.000Z" title="发表于 2025-11-05 10:01:05">2025-11-05</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>加载中...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"><span class="card-category-list-name">工作总结</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%88%90%E9%95%BF%E5%8A%B1%E5%BF%97/"><span class="card-category-list-name">成长励志</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2019/11/">
+            <span class="card-archive-list-date">
+              十一月 2019
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2019/10/">
+            <span class="card-archive-list-date">
+              十月 2019
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-11-09T14:17:15.453Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By DongPo</span><span class="framework-info"><span>框架 </span><a href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div><div class="footer_custom_text">🚀 探索未知 • 创造未来</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  const initGitalk = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGitalk = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const gitalk = new Gitalk({
+      clientID: 'Ov23liRM33hIbB5ll5tR',
+      clientSecret: '2aefc28a2749f6af0e915931d49aa785d032dc36',
+      repo: 'comment',
+      owner: 'tiandongpo',
+      admin: ['tiandongpo'],
+      updateCountCallback: commentCount,
+      ...option,
+      id: isShuoshuo ? path : (option && option.id) || 'c6f64f407e5df0e08f8f09ebf2d13e45'
+    })
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async(el, path) => {
+    if (typeof Gitalk === 'function') initGitalk(el, path)
+    else {
+      await btf.getCSS('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.css')
+      await btf.getScript('https://cdn.jsdelivr.net/npm/gitalk@1.8.0/dist/gitalk.min.js')
+      initGitalk(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Gitalk' === 'Gitalk'
+      ? window.shuoshuoComment = { loadComment: loadGitalk }
+      : window.loadOtherComment = loadGitalk
+    return
+  }
+
+  if ('Gitalk' === 'Gitalk' || !false) {
+    if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><script>window.newestComments = {
+  changeContent: content => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<code>.*?<\/code>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g, "") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0, 150) + '...'
+    }
+    return content
+  },
+
+  generateHtml: (array, ele) => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class="aside-list-item">'
+
+        if (true && array[i].avatar) {
+          const imgAttr = 'data-lazy-src'
+          const lazyloadNative = ''
+          result += `<a href="${array[i].url}" class="thumbnail"><img ${imgAttr}="${array[i].avatar}" alt="${array[i].nick}" ${lazyloadNative}></a>`
+        }
+
+        result += `<div class="content">
+        <a class="comment" href="${array[i].url}" title="${array[i].content}">${array[i].content}</a>
+        <div class="name"><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '暂无评论'
+    }
+
+    ele.innerHTML = result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh(ele)
+  },
+
+  newestCommentInit: (name, getComment) => {
+    const $dom = document.querySelector('#card-newest-comments .aside-list')
+    if ($dom) {
+      const data = btf.saveToLocal.get(name)
+      if (data) {
+        newestComments.generateHtml(JSON.parse(data), $dom)
+      } else {
+        getComment($dom)
+      }
+    }
+  },
+
+  run: (name, getComment) => {
+    newestComments.newestCommentInit(name, getComment)
+    btf.addGlobalFn('pjaxComplete', () => newestComments.newestCommentInit(name, getComment), name)
+  }
+}</script><script>window.addEventListener('load', () => {
+  const keyName = 'github-newest-comments'
+  const { changeContent, generateHtml, run } = window.newestComments
+
+  const findTrueUrl = (array, ele) => {
+    Promise.all(array.map(item =>
+      fetch(item.url).then(resp => resp.json()).then(data => {
+        let urlArray = data.body ? data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig) : []
+        if (!Array.isArray(urlArray) || urlArray.length === 0) {
+          urlArray = [`${data.html_url}`]
+        }
+        if (data.user.login === 'utterances-bot') {
+          return urlArray.pop()
+        } else {
+          return urlArray.shift()
+        }
+      })
+    )).then(res => {
+        array = array.map((i,index)=> {
+          return {
+            ...i,
+            url: res[index]
+          }
+        })
+
+        btf.saveToLocal.set(keyName, JSON.stringify(array), 10/(60*24))
+        generateHtml(array, ele)
+    });
+  }
+
+  const getComment = ele => {
+    fetch('https://api.github.com/repos/tiandongpo/comment/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
+      "headers": {
+        Accept: 'application/vnd.github.v3.html+json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        const githubArray = data.map(item => {
+          return {
+            'avatar': item.user.avatar_url,
+            'content': changeContent(item.body_html || item.body),
+            'nick': item.user.login,
+            'url': item.issue_url,
+            'date': item.updated_at
+          }
+        })
+        findTrueUrl(githubArray, ele)
+      }).catch(e => {
+        console.error(e)
+        ele.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+  }
+  run(keyName, getComment)
+})</script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.1"></script></div></div></body></html>
