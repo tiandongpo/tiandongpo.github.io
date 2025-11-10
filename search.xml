@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>用递归和回溯求解N皇后问题</title>
+      <link href="/2025/11/10/%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E5%9B%9E%E6%BA%AF%E6%B1%82%E8%A7%A3N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+      <url>/2025/11/10/%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E5%9B%9E%E6%BA%AF%E6%B1%82%E8%A7%A3N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h1>带禁区的N皇后问题（N=12，有复杂禁区模式）</h1><p>这是一个具有挑战性的N皇后问题变种，包含复杂的禁区模式，需要使用递归和回溯算法解决。</p><h2 id="问题描述">问题描述</h2><p>在12×12的棋盘上放置12个皇后，使得：<br>没有两个皇后在同一行、同一列或同一对角线上<br>某些格子被标记为禁区，不能放置皇后<br>禁区模式复杂，增加了解决问题的难度</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>优惠卷计算师软件最终GIF效果（四）</title>
       <link href="/2025/11/09/%E4%BC%98%E6%83%A0%E5%8D%B7%E8%AE%A1%E7%AE%97%E5%B8%88%E8%BD%AF%E4%BB%B6%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C(%E5%9B%9B)/"/>
       <url>/2025/11/09/%E4%BC%98%E6%83%A0%E5%8D%B7%E8%AE%A1%E7%AE%97%E5%B8%88%E8%BD%AF%E4%BB%B6%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C(%E5%9B%9B)/</url>
@@ -211,21 +224,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/tech-effects.js"/>
-      <url>/js/tech-effects.js</url>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[// 粒子背景效果document.addEventListener('DOMContentLoaded', function() {  // 只在首页显示粒子背景  if (document.getElementById('page-header')) {    particlesJS('page-header', {      particles: {        number: { value: 80, density: { enable: true, value_area: 800 } },        color: { value: "#00f5ff" },        shape: { type: "circle" },        opacity: { value: 0.5, random: true },        size: { value: 3, random: true },        line_linked: {          enable: true,          distance: 150,          color: "#00f5ff",          opacity: 0.4,          width: 1        },        move: { enable: true, speed: 2, direction: "none", random: true }      },      interactivity: {        detect_on: "canvas",        events: {          onhover: { enable: true, mode: "repulse" },          onclick: { enable: true, mode: "push" }        }      }    });  }  // 打字机效果  const typedElements = document.querySelectorAll('.typed-text');  typedElements.forEach(el => {    const text = el.textContent;    el.textContent = '';    let i = 0;    const typing = setInterval(() => {      if (i < text.length) {        el.textContent += text.charAt(i);        i++;      } else {        clearInterval(typing);      }    }, 100);  });});]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/guestbook/index.html"/>
-      <url>/guestbook/index.html</url>
-      
-        <content type="html"><![CDATA[<h1>留言板</h1>]]></content>
+        <content type="html"><![CDATA[<h1>关于本站</h1><p>这是一个由兴趣创建的个人网站，网站挂载在Github上。</p><p>记录技术进步点滴，让世界听见我们的声音。</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26222134&auto=1&height=66"></iframe>]]></content>
       
     </entry>
     
@@ -237,6 +239,17 @@
       <url>/css/tech-style.css</url>
       
         <content type="html"><![CDATA[/* 科技感主题样式 */:root {  --tech-primary: #00f5ff;  --tech-secondary: #ff2a6d;  --tech-accent: #00ff88;  --tech-bg: #0a0a0a;  --tech-card: #1a1a1a;  --tech-glow: 0 0 10px var(--tech-primary);}/* 科技感按钮 */.tech-btn-primary {  background: linear-gradient(45deg, var(--tech-primary), var(--tech-accent));  border: none;  border-radius: 25px;  padding: 12px 30px;  color: #000;  font-weight: bold;  text-transform: uppercase;  letter-spacing: 1px;  position: relative;  overflow: hidden;  transition: all 0.3s ease;  box-shadow: var(--tech-glow);}.tech-btn-primary:hover {  transform: translateY(-2px);  box-shadow: 0 0 20px var(--tech-primary);}.tech-btn-outline {  background: transparent;  border: 2px solid var(--tech-primary);  color: var(--tech-primary);  border-radius: 25px;  padding: 10px 28px;  transition: all 0.3s ease;}.tech-btn-outline:hover {  background: var(--tech-primary);  color: #000;  box-shadow: var(--tech-glow);}/* 科技感卡片 */.tech-card {  background: var(--tech-card);  border: 1px solid rgba(0, 245, 255, 0.1);  border-radius: 12px;  backdrop-filter: blur(10px);  transition: all 0.3s ease;  position: relative;  overflow: hidden;}.tech-card::before {  content: '';  position: absolute;  top: 0;  left: -100%;  width: 100%;  height: 100%;  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);  transition: left 0.5s ease;}.tech-card:hover::before {  left: 100%;}.tech-card:hover {  transform: translateY(-5px);  border-color: var(--tech-primary);  box-shadow: var(--tech-glow);}/* 代码块科技感样式 */pre {  background: #1e1e1e !important;  border: 1px solid #333;  border-radius: 8px;  position: relative;}pre::before {  content: '';  position: absolute;  top: 0;  left: 0;  right: 0;  height: 2px;  background: linear-gradient(90deg, var(--tech-primary), var(--tech-secondary));}/* 导航栏科技感 */.navbar {  backdrop-filter: blur(10px);  background: rgba(10, 10, 10, 0.9) !important;  border-bottom: 1px solid rgba(0, 245, 255, 0.2);}/* 进度条科技感 */.progress-bar {  background: linear-gradient(90deg, var(--tech-primary), var(--tech-accent));}/* 标签云科技感 */.tag-cloud-list a {  background: rgba(0, 245, 255, 0.1);  border: 1px solid rgba(0, 245, 255, 0.3);  transition: all 0.3s ease;}.tag-cloud-list a:hover {  background: var(--tech-primary);  color: #000;  transform: scale(1.1);}/* 科技感代码高亮 */.highlight {  background: #1a1a2e !important;  border-left: 4px solid var(--tech-primary);}code {  background: rgba(0, 245, 255, 0.1) !important;  color: var(--tech-primary) !important;  padding: 2px 6px !important;  border-radius: 3px !important;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/guestbook/index.html"/>
+      <url>/guestbook/index.html</url>
+      
+        <content type="html"><![CDATA[<h1>留言板</h1>]]></content>
       
     </entry>
     
@@ -255,10 +268,10 @@
     
     <entry>
       <title></title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <link href="/me/index.html"/>
+      <url>/me/index.html</url>
       
-        <content type="html"><![CDATA[<h1>关于本站</h1><p>这是一个由兴趣创建的个人网站，网站挂载在Github上。</p><p>记录技术进步点滴，让世界听见我们的声音。</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26222134&auto=1&height=66"></iframe>]]></content>
+        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
       
     </entry>
     
@@ -277,30 +290,8 @@
     
     <entry>
       <title></title>
-      <link href="/me/index.html"/>
-      <url>/me/index.html</url>
-      
-        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/pdf/index.html"/>
       <url>/pdf/index.html</url>
-      
-        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/portfolio/index.html"/>
-      <url>/portfolio/index.html</url>
       
         <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
       
@@ -321,10 +312,21 @@
     
     <entry>
       <title></title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <link href="/js/tech-effects.js"/>
+      <url>/js/tech-effects.js</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[// 粒子背景效果document.addEventListener('DOMContentLoaded', function() {  // 只在首页显示粒子背景  if (document.getElementById('page-header')) {    particlesJS('page-header', {      particles: {        number: { value: 80, density: { enable: true, value_area: 800 } },        color: { value: "#00f5ff" },        shape: { type: "circle" },        opacity: { value: 0.5, random: true },        size: { value: 3, random: true },        line_linked: {          enable: true,          distance: 150,          color: "#00f5ff",          opacity: 0.4,          width: 1        },        move: { enable: true, speed: 2, direction: "none", random: true }      },      interactivity: {        detect_on: "canvas",        events: {          onhover: { enable: true, mode: "repulse" },          onclick: { enable: true, mode: "push" }        }      }    });  }  // 打字机效果  const typedElements = document.querySelectorAll('.typed-text');  typedElements.forEach(el => {    const text = el.textContent;    el.textContent = '';    let i = 0;    const typing = setInterval(() => {      if (i < text.length) {        el.textContent += text.charAt(i);        i++;      } else {        clearInterval(typing);      }    }, 100);  });});]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/portfolio/index.html"/>
+      <url>/portfolio/index.html</url>
+      
+        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
       
     </entry>
     
@@ -334,6 +336,17 @@
       <title></title>
       <link href="/projects/index.html"/>
       <url>/projects/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
