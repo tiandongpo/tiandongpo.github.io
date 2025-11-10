@@ -8,7 +8,7 @@
       <link href="/2025/11/10/%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E5%9B%9E%E6%BA%AF%E6%B1%82%E8%A7%A3N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/"/>
       <url>/2025/11/10/%E7%94%A8%E9%80%92%E5%BD%92%E5%92%8C%E5%9B%9E%E6%BA%AF%E6%B1%82%E8%A7%A3N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89/</url>
       
-        <content type="html"><![CDATA[<h1>带禁区的N皇后问题（N=12，有复杂禁区模式）</h1><p>这是一个具有挑战性的N皇后问题变种，包含复杂的禁区模式，需要使用递归和回溯算法解决。</p><h2 id="问题描述">问题描述</h2><p>在12×12的棋盘上放置12个皇后，使得：<br>没有两个皇后在同一行、同一列或同一对角线上<br>某些格子被标记为禁区，不能放置皇后<br>禁区模式复杂，增加了解决问题的难度</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1>带禁区的N皇后问题</h1><p>这是一个具有挑战性的N皇后问题变种，包含复杂的禁区模式，需要使用递归和回溯算法解决。</p><h2 id="问题描述">问题描述</h2><p>在N * N的棋盘上放置N个皇后，使得：<br>没有两个皇后在同一行、同一列或同一对角线上(即互不攻击)<br>某些格子被标记为禁区，不能放置皇后</p><h2 id="扩展条件">扩展条件</h2><p>棋盘的某些格子是禁区(用二维数组标记)，皇后不能放在禁区。</p><p>要求计算所有可能的放置方案数目。</p><h2 id="签名函数-c-版本">签名函数(c++版本):</h2><pre><code>int totalNQueensWithRestrictions(int n, vector&lt;vector&lt;bool&gt;&gt; forbidden);其中 forbidden[i] == true 表示第i行、第j列是禁区，不能放置皇后。</code></pre><h2 id="约束">约束</h2><pre><code>1 &lt;= n &lt;= 12需要高效减枝</code></pre><h2 id="要求">要求</h2><pre><code>用递归回溯实现。减枝:在放置过程中，如果当前剩余行数+已放置皇后数&lt;n但已经无法继续(因为某些列或者斜线被禁区阻挡)，可以提前终止。列出最终方案总数</code></pre><h2 id="提示思路">提示思路</h2><pre><code>按行递归，每一行选择一个可放的列(不在禁区内，且行、列、主对角线、负对角线未被占用)。用三个掩码来记录列和两条斜方向的占用情况，加快判断。遇到禁区格子时跳过该列。</code></pre><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       
       
       
@@ -212,17 +212,6 @@
     
     
     <entry>
-      <title>项目设计总结</title>
-      <link href="/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1%E6%80%BB%E7%BB%93.html"/>
-      <url>/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1%E6%80%BB%E7%BB%93.html</url>
-      
-        <content type="html"><![CDATA[<h1>软件项目设计经验总结</h1><pre><code>一款软件产品的存在和广泛适用，在时间线上存在一个关键点。 软件设计的顶点是使用工具做工具(即定制化，只有我有。比如用QT做的软件做软件,需要注意文件的编码)。 后续将硬件学习定为目标，需要学历硬件发展历史和linux操作系统编程。## 一款优雅的产品，由本项目的制作过程学习到应该是硬件、底层软件、应用软件、UI、以及开发者使用的定位辅助工具组成。* 一个成功的产品要当成是有艺术感的作品来对待，不光要考虑到产品物理本身的美观、易用、可维护、可升级扩展以及最重要的长久使用周期，也即有持续市场和长远被需要。 * 底层软件是硬件厂商发布产品时伴随产品的官方接口。如果是自己生产的硬件，那么芯片支持的库和接口名称要合理合规，参数和返回值要能够满足特定标准，做到同类型产品能支持的运算和计算量要做到最低保障，还要扩展功能和优化扩展功能，并且要做到高级功能不会造成过度的性能开销。* 应用软件用于处理程序真实的数据输入。需要在逻辑计算层面上做到和硬件本身支持的最底层基础运算解耦，芯片只能处理官方定义和支持的运算，未被实现的计算和自定义算法应该在应用层使用计算机语言进行模拟近似运算，只要数据有效长度够，就能够得到足够精确度的计算结果。在这个应用软件设计过程中，如果要保证软件的稳定性和高效性能，需要做好内存管理、数据暂存。软件在运行过程中，要尽可能减少重复逻辑和已知结果的运算，以至于要尽可能做到产品越用越快越用越准。* UI是产品使用者能够直接感受到的软件形态，软件界面应该要满足业界通用软件设计规范，使得有任意可接受程度高的软件使用经验的能够猜测到软件的使用方法，满足傻瓜式操作。产品的设计要有合理的布局，比如满足对称、对齐、树形结构等。软件界面上的名称、图标、按钮、输入输出框、文本、颜色相关类、界面跳转等任意构成用户使用要素的上层产品元素都应该满足人眼的舒适性和操作的便利性。* 辅助定位工具是指在产品最终发布态时，如果要排查硬件环境损坏、芯片更换、输入数据非法、或者用户操作不符合预期等问题时，能够用于辅助定位相对应问题根本原因的工具。 包括硬件自测试脚本、读写硬件寄存器接口、应用层软件日志系统、用户操作异步或缺少互斥等。在软件研发初期可以在代码内部添加日志模块、包括故障修复提示的巡检模块、能够实时返回某个时间段的处理状态的命令等，用于软件开发初期的单元测试已及用户使用异常问题定位的高级手段。 而辅助工具即验证软件处理该模块最初数据和收到反馈的过程中，用于检测数据是否被合理正确的读写和运算。## 以刚刚做的超市折扣工具为例，分析设计过程中的重点操作和后续持续改进点。* 硬件： QT支持的平台较多，任意能跑windows、linux系列软件安装QT环境后，都能够跑QT发布的程序。需要注意研发QT的版本和程序运行设备上的版本是否匹配或者兼容。 超市结算机器属于嵌入式系统，在安装相关环境后也能够使用该套软件设计能够做更好功能更多的自定义收盈软件。* 底层软件： QT库、操作系统级别的系统接口、第三方平台库或自定义库。系统接口通常封装在system.h，第三方库需要安装对应模块，并修改编译工程的配置文件，自定义库的返回值类型要能够被接收模块处理。* 应用软件： 包括最重要的数据结构和算法，需要支持数据的计算机算法(查找、排序、递归、动态规划、贪心等只有计算机能做到的高性能业界通用算法)，自定义数据类型的高级数学运算要做到尽可能正确的运算，也要考虑通用软件编码规范和安全编码规范。* UI: 使用设计师软件最软件最终效果进行设计，对布局、美观、多页签等每个元素进行艺术化设计，对控件的像素和rgb要做到精确。五种通用计算机算法也可以迁移到UI设计上面。* 定位工具： 核心算法验证和界面软件验证要做到解耦，用于防治UI模块和应用软件模块数据处理和传输的不正确性。软件设计的四层接口都要做到类似的独立定位。</code></pre>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -234,11 +223,33 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/tech-style.css"/>
-      <url>/css/tech-style.css</url>
+      <title>项目设计总结</title>
+      <link href="/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1%E6%80%BB%E7%BB%93.html"/>
+      <url>/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1%E6%80%BB%E7%BB%93.html</url>
       
-        <content type="html"><![CDATA[/* 科技感主题样式 */:root {  --tech-primary: #00f5ff;  --tech-secondary: #ff2a6d;  --tech-accent: #00ff88;  --tech-bg: #0a0a0a;  --tech-card: #1a1a1a;  --tech-glow: 0 0 10px var(--tech-primary);}/* 科技感按钮 */.tech-btn-primary {  background: linear-gradient(45deg, var(--tech-primary), var(--tech-accent));  border: none;  border-radius: 25px;  padding: 12px 30px;  color: #000;  font-weight: bold;  text-transform: uppercase;  letter-spacing: 1px;  position: relative;  overflow: hidden;  transition: all 0.3s ease;  box-shadow: var(--tech-glow);}.tech-btn-primary:hover {  transform: translateY(-2px);  box-shadow: 0 0 20px var(--tech-primary);}.tech-btn-outline {  background: transparent;  border: 2px solid var(--tech-primary);  color: var(--tech-primary);  border-radius: 25px;  padding: 10px 28px;  transition: all 0.3s ease;}.tech-btn-outline:hover {  background: var(--tech-primary);  color: #000;  box-shadow: var(--tech-glow);}/* 科技感卡片 */.tech-card {  background: var(--tech-card);  border: 1px solid rgba(0, 245, 255, 0.1);  border-radius: 12px;  backdrop-filter: blur(10px);  transition: all 0.3s ease;  position: relative;  overflow: hidden;}.tech-card::before {  content: '';  position: absolute;  top: 0;  left: -100%;  width: 100%;  height: 100%;  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);  transition: left 0.5s ease;}.tech-card:hover::before {  left: 100%;}.tech-card:hover {  transform: translateY(-5px);  border-color: var(--tech-primary);  box-shadow: var(--tech-glow);}/* 代码块科技感样式 */pre {  background: #1e1e1e !important;  border: 1px solid #333;  border-radius: 8px;  position: relative;}pre::before {  content: '';  position: absolute;  top: 0;  left: 0;  right: 0;  height: 2px;  background: linear-gradient(90deg, var(--tech-primary), var(--tech-secondary));}/* 导航栏科技感 */.navbar {  backdrop-filter: blur(10px);  background: rgba(10, 10, 10, 0.9) !important;  border-bottom: 1px solid rgba(0, 245, 255, 0.2);}/* 进度条科技感 */.progress-bar {  background: linear-gradient(90deg, var(--tech-primary), var(--tech-accent));}/* 标签云科技感 */.tag-cloud-list a {  background: rgba(0, 245, 255, 0.1);  border: 1px solid rgba(0, 245, 255, 0.3);  transition: all 0.3s ease;}.tag-cloud-list a:hover {  background: var(--tech-primary);  color: #000;  transform: scale(1.1);}/* 科技感代码高亮 */.highlight {  background: #1a1a2e !important;  border-left: 4px solid var(--tech-primary);}code {  background: rgba(0, 245, 255, 0.1) !important;  color: var(--tech-primary) !important;  padding: 2px 6px !important;  border-radius: 3px !important;}]]></content>
+        <content type="html"><![CDATA[<h1>软件项目设计经验总结</h1><pre><code>一款软件产品的存在和广泛适用，在时间线上存在一个关键点。 软件设计的顶点是使用工具做工具(即定制化，只有我有。比如用QT做的软件做软件,需要注意文件的编码)。 后续将硬件学习定为目标，需要学历硬件发展历史和linux操作系统编程。## 一款优雅的产品，由本项目的制作过程学习到应该是硬件、底层软件、应用软件、UI、以及开发者使用的定位辅助工具组成。* 一个成功的产品要当成是有艺术感的作品来对待，不光要考虑到产品物理本身的美观、易用、可维护、可升级扩展以及最重要的长久使用周期，也即有持续市场和长远被需要。 * 底层软件是硬件厂商发布产品时伴随产品的官方接口。如果是自己生产的硬件，那么芯片支持的库和接口名称要合理合规，参数和返回值要能够满足特定标准，做到同类型产品能支持的运算和计算量要做到最低保障，还要扩展功能和优化扩展功能，并且要做到高级功能不会造成过度的性能开销。* 应用软件用于处理程序真实的数据输入。需要在逻辑计算层面上做到和硬件本身支持的最底层基础运算解耦，芯片只能处理官方定义和支持的运算，未被实现的计算和自定义算法应该在应用层使用计算机语言进行模拟近似运算，只要数据有效长度够，就能够得到足够精确度的计算结果。在这个应用软件设计过程中，如果要保证软件的稳定性和高效性能，需要做好内存管理、数据暂存。软件在运行过程中，要尽可能减少重复逻辑和已知结果的运算，以至于要尽可能做到产品越用越快越用越准。* UI是产品使用者能够直接感受到的软件形态，软件界面应该要满足业界通用软件设计规范，使得有任意可接受程度高的软件使用经验的能够猜测到软件的使用方法，满足傻瓜式操作。产品的设计要有合理的布局，比如满足对称、对齐、树形结构等。软件界面上的名称、图标、按钮、输入输出框、文本、颜色相关类、界面跳转等任意构成用户使用要素的上层产品元素都应该满足人眼的舒适性和操作的便利性。* 辅助定位工具是指在产品最终发布态时，如果要排查硬件环境损坏、芯片更换、输入数据非法、或者用户操作不符合预期等问题时，能够用于辅助定位相对应问题根本原因的工具。 包括硬件自测试脚本、读写硬件寄存器接口、应用层软件日志系统、用户操作异步或缺少互斥等。在软件研发初期可以在代码内部添加日志模块、包括故障修复提示的巡检模块、能够实时返回某个时间段的处理状态的命令等，用于软件开发初期的单元测试已及用户使用异常问题定位的高级手段。 而辅助工具即验证软件处理该模块最初数据和收到反馈的过程中，用于检测数据是否被合理正确的读写和运算。## 以刚刚做的超市折扣工具为例，分析设计过程中的重点操作和后续持续改进点。* 硬件： QT支持的平台较多，任意能跑windows、linux系列软件安装QT环境后，都能够跑QT发布的程序。需要注意研发QT的版本和程序运行设备上的版本是否匹配或者兼容。 超市结算机器属于嵌入式系统，在安装相关环境后也能够使用该套软件设计能够做更好功能更多的自定义收盈软件。* 底层软件： QT库、操作系统级别的系统接口、第三方平台库或自定义库。系统接口通常封装在system.h，第三方库需要安装对应模块，并修改编译工程的配置文件，自定义库的返回值类型要能够被接收模块处理。* 应用软件： 包括最重要的数据结构和算法，需要支持数据的计算机算法(查找、排序、递归、动态规划、贪心等只有计算机能做到的高性能业界通用算法)，自定义数据类型的高级数学运算要做到尽可能正确的运算，也要考虑通用软件编码规范和安全编码规范。* UI: 使用设计师软件最软件最终效果进行设计，对布局、美观、多页签等每个元素进行艺术化设计，对控件的像素和rgb要做到精确。五种通用计算机算法也可以迁移到UI设计上面。* 定位工具： 核心算法验证和界面软件验证要做到解耦，用于防治UI模块和应用软件模块数据处理和传输的不正确性。软件设计的四层接口都要做到类似的独立定位。</code></pre>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/tech-effects.js"/>
+      <url>/js/tech-effects.js</url>
+      
+        <content type="html"><![CDATA[// 粒子背景效果document.addEventListener('DOMContentLoaded', function() {  // 只在首页显示粒子背景  if (document.getElementById('page-header')) {    particlesJS('page-header', {      particles: {        number: { value: 80, density: { enable: true, value_area: 800 } },        color: { value: "#00f5ff" },        shape: { type: "circle" },        opacity: { value: 0.5, random: true },        size: { value: 3, random: true },        line_linked: {          enable: true,          distance: 150,          color: "#00f5ff",          opacity: 0.4,          width: 1        },        move: { enable: true, speed: 2, direction: "none", random: true }      },      interactivity: {        detect_on: "canvas",        events: {          onhover: { enable: true, mode: "repulse" },          onclick: { enable: true, mode: "push" }        }      }    });  }  // 打字机效果  const typedElements = document.querySelectorAll('.typed-text');  typedElements.forEach(el => {    const text = el.textContent;    el.textContent = '';    let i = 0;    const typing = setInterval(() => {      if (i < text.length) {        el.textContent += text.charAt(i);        i++;      } else {        clearInterval(typing);      }    }, 100);  });});]]></content>
       
     </entry>
     
@@ -256,11 +267,11 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title></title>
+      <link href="/css/tech-style.css"/>
+      <url>/css/tech-style.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[/* 科技感主题样式 */:root {  --tech-primary: #00f5ff;  --tech-secondary: #ff2a6d;  --tech-accent: #00ff88;  --tech-bg: #0a0a0a;  --tech-card: #1a1a1a;  --tech-glow: 0 0 10px var(--tech-primary);}/* 科技感按钮 */.tech-btn-primary {  background: linear-gradient(45deg, var(--tech-primary), var(--tech-accent));  border: none;  border-radius: 25px;  padding: 12px 30px;  color: #000;  font-weight: bold;  text-transform: uppercase;  letter-spacing: 1px;  position: relative;  overflow: hidden;  transition: all 0.3s ease;  box-shadow: var(--tech-glow);}.tech-btn-primary:hover {  transform: translateY(-2px);  box-shadow: 0 0 20px var(--tech-primary);}.tech-btn-outline {  background: transparent;  border: 2px solid var(--tech-primary);  color: var(--tech-primary);  border-radius: 25px;  padding: 10px 28px;  transition: all 0.3s ease;}.tech-btn-outline:hover {  background: var(--tech-primary);  color: #000;  box-shadow: var(--tech-glow);}/* 科技感卡片 */.tech-card {  background: var(--tech-card);  border: 1px solid rgba(0, 245, 255, 0.1);  border-radius: 12px;  backdrop-filter: blur(10px);  transition: all 0.3s ease;  position: relative;  overflow: hidden;}.tech-card::before {  content: '';  position: absolute;  top: 0;  left: -100%;  width: 100%;  height: 100%;  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);  transition: left 0.5s ease;}.tech-card:hover::before {  left: 100%;}.tech-card:hover {  transform: translateY(-5px);  border-color: var(--tech-primary);  box-shadow: var(--tech-glow);}/* 代码块科技感样式 */pre {  background: #1e1e1e !important;  border: 1px solid #333;  border-radius: 8px;  position: relative;}pre::before {  content: '';  position: absolute;  top: 0;  left: 0;  right: 0;  height: 2px;  background: linear-gradient(90deg, var(--tech-primary), var(--tech-secondary));}/* 导航栏科技感 */.navbar {  backdrop-filter: blur(10px);  background: rgba(10, 10, 10, 0.9) !important;  border-bottom: 1px solid rgba(0, 245, 255, 0.2);}/* 进度条科技感 */.progress-bar {  background: linear-gradient(90deg, var(--tech-primary), var(--tech-accent));}/* 标签云科技感 */.tag-cloud-list a {  background: rgba(0, 245, 255, 0.1);  border: 1px solid rgba(0, 245, 255, 0.3);  transition: all 0.3s ease;}.tag-cloud-list a:hover {  background: var(--tech-primary);  color: #000;  transform: scale(1.1);}/* 科技感代码高亮 */.highlight {  background: #1a1a2e !important;  border-left: 4px solid var(--tech-primary);}code {  background: rgba(0, 245, 255, 0.1) !important;  color: var(--tech-primary) !important;  padding: 2px 6px !important;  border-radius: 3px !important;}]]></content>
       
     </entry>
     
@@ -300,6 +311,17 @@
     
     
     <entry>
+      <title></title>
+      <link href="/portfolio/index.html"/>
+      <url>/portfolio/index.html</url>
+      
+        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>相册</title>
       <link href="/photos/index.html"/>
       <url>/photos/index.html</url>
@@ -312,30 +334,8 @@
     
     <entry>
       <title></title>
-      <link href="/js/tech-effects.js"/>
-      <url>/js/tech-effects.js</url>
-      
-        <content type="html"><![CDATA[// 粒子背景效果document.addEventListener('DOMContentLoaded', function() {  // 只在首页显示粒子背景  if (document.getElementById('page-header')) {    particlesJS('page-header', {      particles: {        number: { value: 80, density: { enable: true, value_area: 800 } },        color: { value: "#00f5ff" },        shape: { type: "circle" },        opacity: { value: 0.5, random: true },        size: { value: 3, random: true },        line_linked: {          enable: true,          distance: 150,          color: "#00f5ff",          opacity: 0.4,          width: 1        },        move: { enable: true, speed: 2, direction: "none", random: true }      },      interactivity: {        detect_on: "canvas",        events: {          onhover: { enable: true, mode: "repulse" },          onclick: { enable: true, mode: "push" }        }      }    });  }  // 打字机效果  const typedElements = document.querySelectorAll('.typed-text');  typedElements.forEach(el => {    const text = el.textContent;    el.textContent = '';    let i = 0;    const typing = setInterval(() => {      if (i < text.length) {        el.textContent += text.charAt(i);        i++;      } else {        clearInterval(typing);      }    }, 100);  });});]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/portfolio/index.html"/>
-      <url>/portfolio/index.html</url>
-      
-        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/projects/index.html"/>
-      <url>/projects/index.html</url>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -345,8 +345,8 @@
     
     <entry>
       <title></title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <link href="/projects/index.html"/>
+      <url>/projects/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
