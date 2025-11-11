@@ -34,7 +34,7 @@
       <link href="/2025/11/06/%E4%BD%BF%E7%94%A8Figma%E7%BB%99%E8%B6%85%E5%B8%82%E4%BC%98%E6%83%A0%E5%8D%B7%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1UI%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
       <url>/2025/11/06/%E4%BD%BF%E7%94%A8Figma%E7%BB%99%E8%B6%85%E5%B8%82%E4%BC%98%E6%83%A0%E5%8D%B7%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1UI%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/FigmaUI.png" alt=""><br>![](<a href="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/FigmaUi2.png%EF%BC%89">https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/FigmaUi2.png）</a></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/FigmaUI.png" alt=""></p><p>![](<a href="https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/FigmaUi2.png%EF%BC%89">https://tiandongpo-github-io-1385757760.cos.ap-chengdu.myqcloud.com/FigmaUi2.png）</a></p>]]></content>
       
       
       
@@ -210,33 +210,11 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
         <content type="html"><![CDATA[<h1>关于本站</h1><p>这是一个由兴趣创建的个人网站，网站挂载在Github上。</p><p>记录技术进步点滴，让世界听见我们的声音。</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=26222134&auto=1&height=66"></iframe>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/guestbook/index.html"/>
-      <url>/guestbook/index.html</url>
-      
-        <content type="html"><![CDATA[<h1>留言板</h1>]]></content>
       
     </entry>
     
@@ -265,11 +243,33 @@
     
     
     <entry>
-      <title></title>
-      <link href="/me/index.html"/>
-      <url>/me/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/guestbook/index.html"/>
+      <url>/guestbook/index.html</url>
+      
+        <content type="html"><![CDATA[<h1>留言板</h1>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/tech-effects.js"/>
+      <url>/js/tech-effects.js</url>
+      
+        <content type="html"><![CDATA[// 粒子背景效果document.addEventListener('DOMContentLoaded', function() {  // 只在首页显示粒子背景  if (document.getElementById('page-header')) {    particlesJS('page-header', {      particles: {        number: { value: 80, density: { enable: true, value_area: 800 } },        color: { value: "#00f5ff" },        shape: { type: "circle" },        opacity: { value: 0.5, random: true },        size: { value: 3, random: true },        line_linked: {          enable: true,          distance: 150,          color: "#00f5ff",          opacity: 0.4,          width: 1        },        move: { enable: true, speed: 2, direction: "none", random: true }      },      interactivity: {        detect_on: "canvas",        events: {          onhover: { enable: true, mode: "repulse" },          onclick: { enable: true, mode: "push" }        }      }    });  }  // 打字机效果  const typedElements = document.querySelectorAll('.typed-text');  typedElements.forEach(el => {    const text = el.textContent;    el.textContent = '';    let i = 0;    const typing = setInterval(() => {      if (i < text.length) {        el.textContent += text.charAt(i);        i++;      } else {        clearInterval(typing);      }    }, 100);  });});]]></content>
       
     </entry>
     
@@ -279,6 +279,17 @@
       <title></title>
       <link href="/pdf/index.html"/>
       <url>/pdf/index.html</url>
+      
+        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/me/index.html"/>
+      <url>/me/index.html</url>
       
         <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
       
@@ -325,17 +336,6 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/tech-effects.js"/>
-      <url>/js/tech-effects.js</url>
-      
-        <content type="html"><![CDATA[// 粒子背景效果document.addEventListener('DOMContentLoaded', function() {  // 只在首页显示粒子背景  if (document.getElementById('page-header')) {    particlesJS('page-header', {      particles: {        number: { value: 80, density: { enable: true, value_area: 800 } },        color: { value: "#00f5ff" },        shape: { type: "circle" },        opacity: { value: 0.5, random: true },        size: { value: 3, random: true },        line_linked: {          enable: true,          distance: 150,          color: "#00f5ff",          opacity: 0.4,          width: 1        },        move: { enable: true, speed: 2, direction: "none", random: true }      },      interactivity: {        detect_on: "canvas",        events: {          onhover: { enable: true, mode: "repulse" },          onclick: { enable: true, mode: "push" }        }      }    });  }  // 打字机效果  const typedElements = document.querySelectorAll('.typed-text');  typedElements.forEach(el => {    const text = el.textContent;    el.textContent = '';    let i = 0;    const typing = setInterval(() => {      if (i < text.length) {        el.textContent += text.charAt(i);        i++;      } else {        clearInterval(typing);      }    }, 100);  });});]]></content>
       
     </entry>
     
