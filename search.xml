@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>安装openCV和python识别脸、脖子、衣服(三)</title>
+      <link href="/2025/11/17/%E8%AF%81%E4%BB%B6%E7%85%A7ps%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1-%E4%B8%89/"/>
+      <url>/2025/11/17/%E8%AF%81%E4%BB%B6%E7%85%A7ps%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1-%E4%B8%89/</url>
+      
+        <content type="html"><![CDATA[<h2 id="环境">环境</h2><p>QT6 + python3.14</p><h2 id="安装命令">安装命令</h2><p>pip install --no-cache-dir -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> numpy<br>pip install --no-cache-dir -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> torch torchvision<br>pip install --no-cache-dir -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a>  opencv-contrib-python==4.11.0.86</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>screenToGif录制证件照背景颜色替换效果(二)</title>
       <link href="/2025/11/16/%E8%AF%81%E4%BB%B6%E7%85%A7ps%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1-%E4%BA%8C/"/>
       <url>/2025/11/16/%E8%AF%81%E4%BB%B6%E7%85%A7ps%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1-%E4%BA%8C/</url>
@@ -322,28 +335,6 @@
     
     <entry>
       <title></title>
-      <link href="/guestbook/index.html"/>
-      <url>/guestbook/index.html</url>
-      
-        <content type="html"><![CDATA[<h1>留言板</h1>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/me/index.html"/>
-      <url>/me/index.html</url>
-      
-        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/tech-style.css"/>
       <url>/css/tech-style.css</url>
       
@@ -359,6 +350,50 @@
       <url>/js/tech-effects.js</url>
       
         <content type="html"><![CDATA[// 粒子背景效果document.addEventListener('DOMContentLoaded', function() {  // 只在首页显示粒子背景  if (document.getElementById('page-header')) {    particlesJS('page-header', {      particles: {        number: { value: 80, density: { enable: true, value_area: 800 } },        color: { value: "#00f5ff" },        shape: { type: "circle" },        opacity: { value: 0.5, random: true },        size: { value: 3, random: true },        line_linked: {          enable: true,          distance: 150,          color: "#00f5ff",          opacity: 0.4,          width: 1        },        move: { enable: true, speed: 2, direction: "none", random: true }      },      interactivity: {        detect_on: "canvas",        events: {          onhover: { enable: true, mode: "repulse" },          onclick: { enable: true, mode: "push" }        }      }    });  }  // 打字机效果  const typedElements = document.querySelectorAll('.typed-text');  typedElements.forEach(el => {    const text = el.textContent;    el.textContent = '';    let i = 0;    const typing = setInterval(() => {      if (i < text.length) {        el.textContent += text.charAt(i);        i++;      } else {        clearInterval(typing);      }    }, 100);  });});]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" href="../lib/album/ins.css"><link rel="stylesheet" href="../lib/album/photoswipe.css"> <link rel="stylesheet" href="../lib/album/default-skin/default-skin.css"> <div class="photos-btn-wrap">  <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Photos</a></div><div class="instagram itemscope">  <a href="https://tiandongpo.github.io/" target="_blank" class="open-ins">图片正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {        loadScript('../lib/album/ins.js')    }, 0)  })()</script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/guestbook/index.html"/>
+      <url>/guestbook/index.html</url>
+      
+        <content type="html"><![CDATA[<h1>留言板</h1>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/pdf/index.html"/>
+      <url>/pdf/index.html</url>
+      
+        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/me/index.html"/>
+      <url>/me/index.html</url>
+      
+        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
       
     </entry>
     
@@ -387,33 +422,11 @@
     
     
     <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" href="../lib/album/ins.css"><link rel="stylesheet" href="../lib/album/photoswipe.css"> <link rel="stylesheet" href="../lib/album/default-skin/default-skin.css"> <div class="photos-btn-wrap">  <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Photos</a></div><div class="instagram itemscope">  <a href="https://tiandongpo.github.io/" target="_blank" class="open-ins">图片正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {        loadScript('../lib/album/ins.js')    }, 0)  })()</script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/projects/index.html"/>
       <url>/projects/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/pdf/index.html"/>
-      <url>/pdf/index.html</url>
-      
-        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
       
     </entry>
     
