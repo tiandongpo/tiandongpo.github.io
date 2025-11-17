@@ -312,6 +312,17 @@
     
     
     <entry>
+      <title></title>
+      <link href="/css/tech-style.css"/>
+      <url>/css/tech-style.css</url>
+      
+        <content type="html"><![CDATA[/* 科技感主题样式 */:root {  --tech-primary: #00f5ff;  --tech-secondary: #ff2a6d;  --tech-accent: #00ff88;  --tech-bg: #0a0a0a;  --tech-card: #1a1a1a;  --tech-glow: 0 0 10px var(--tech-primary);}/* 科技感按钮 */.tech-btn-primary {  background: linear-gradient(45deg, var(--tech-primary), var(--tech-accent));  border: none;  border-radius: 25px;  padding: 12px 30px;  color: #000;  font-weight: bold;  text-transform: uppercase;  letter-spacing: 1px;  position: relative;  overflow: hidden;  transition: all 0.3s ease;  box-shadow: var(--tech-glow);}.tech-btn-primary:hover {  transform: translateY(-2px);  box-shadow: 0 0 20px var(--tech-primary);}.tech-btn-outline {  background: transparent;  border: 2px solid var(--tech-primary);  color: var(--tech-primary);  border-radius: 25px;  padding: 10px 28px;  transition: all 0.3s ease;}.tech-btn-outline:hover {  background: var(--tech-primary);  color: #000;  box-shadow: var(--tech-glow);}/* 科技感卡片 */.tech-card {  background: var(--tech-card);  border: 1px solid rgba(0, 245, 255, 0.1);  border-radius: 12px;  backdrop-filter: blur(10px);  transition: all 0.3s ease;  position: relative;  overflow: hidden;}.tech-card::before {  content: '';  position: absolute;  top: 0;  left: -100%;  width: 100%;  height: 100%;  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);  transition: left 0.5s ease;}.tech-card:hover::before {  left: 100%;}.tech-card:hover {  transform: translateY(-5px);  border-color: var(--tech-primary);  box-shadow: var(--tech-glow);}/* 代码块科技感样式 */pre {  background: #1e1e1e !important;  border: 1px solid #333;  border-radius: 8px;  position: relative;}pre::before {  content: '';  position: absolute;  top: 0;  left: 0;  right: 0;  height: 2px;  background: linear-gradient(90deg, var(--tech-primary), var(--tech-secondary));}/* 导航栏科技感 */.navbar {  backdrop-filter: blur(10px);  background: rgba(10, 10, 10, 0.9) !important;  border-bottom: 1px solid rgba(0, 245, 255, 0.2);}/* 进度条科技感 */.progress-bar {  background: linear-gradient(90deg, var(--tech-primary), var(--tech-accent));}/* 标签云科技感 */.tag-cloud-list a {  background: rgba(0, 245, 255, 0.1);  border: 1px solid rgba(0, 245, 255, 0.3);  transition: all 0.3s ease;}.tag-cloud-list a:hover {  background: var(--tech-primary);  color: #000;  transform: scale(1.1);}/* 科技感代码高亮 */.highlight {  background: #1a1a2e !important;  border-left: 4px solid var(--tech-primary);}code {  background: rgba(0, 245, 255, 0.1) !important;  color: var(--tech-primary) !important;  padding: 2px 6px !important;  border-radius: 3px !important;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -335,32 +346,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/tech-style.css"/>
-      <url>/css/tech-style.css</url>
-      
-        <content type="html"><![CDATA[/* 科技感主题样式 */:root {  --tech-primary: #00f5ff;  --tech-secondary: #ff2a6d;  --tech-accent: #00ff88;  --tech-bg: #0a0a0a;  --tech-card: #1a1a1a;  --tech-glow: 0 0 10px var(--tech-primary);}/* 科技感按钮 */.tech-btn-primary {  background: linear-gradient(45deg, var(--tech-primary), var(--tech-accent));  border: none;  border-radius: 25px;  padding: 12px 30px;  color: #000;  font-weight: bold;  text-transform: uppercase;  letter-spacing: 1px;  position: relative;  overflow: hidden;  transition: all 0.3s ease;  box-shadow: var(--tech-glow);}.tech-btn-primary:hover {  transform: translateY(-2px);  box-shadow: 0 0 20px var(--tech-primary);}.tech-btn-outline {  background: transparent;  border: 2px solid var(--tech-primary);  color: var(--tech-primary);  border-radius: 25px;  padding: 10px 28px;  transition: all 0.3s ease;}.tech-btn-outline:hover {  background: var(--tech-primary);  color: #000;  box-shadow: var(--tech-glow);}/* 科技感卡片 */.tech-card {  background: var(--tech-card);  border: 1px solid rgba(0, 245, 255, 0.1);  border-radius: 12px;  backdrop-filter: blur(10px);  transition: all 0.3s ease;  position: relative;  overflow: hidden;}.tech-card::before {  content: '';  position: absolute;  top: 0;  left: -100%;  width: 100%;  height: 100%;  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);  transition: left 0.5s ease;}.tech-card:hover::before {  left: 100%;}.tech-card:hover {  transform: translateY(-5px);  border-color: var(--tech-primary);  box-shadow: var(--tech-glow);}/* 代码块科技感样式 */pre {  background: #1e1e1e !important;  border: 1px solid #333;  border-radius: 8px;  position: relative;}pre::before {  content: '';  position: absolute;  top: 0;  left: 0;  right: 0;  height: 2px;  background: linear-gradient(90deg, var(--tech-primary), var(--tech-secondary));}/* 导航栏科技感 */.navbar {  backdrop-filter: blur(10px);  background: rgba(10, 10, 10, 0.9) !important;  border-bottom: 1px solid rgba(0, 245, 255, 0.2);}/* 进度条科技感 */.progress-bar {  background: linear-gradient(90deg, var(--tech-primary), var(--tech-accent));}/* 标签云科技感 */.tag-cloud-list a {  background: rgba(0, 245, 255, 0.1);  border: 1px solid rgba(0, 245, 255, 0.3);  transition: all 0.3s ease;}.tag-cloud-list a:hover {  background: var(--tech-primary);  color: #000;  transform: scale(1.1);}/* 科技感代码高亮 */.highlight {  background: #1a1a2e !important;  border-left: 4px solid var(--tech-primary);}code {  background: rgba(0, 245, 255, 0.1) !important;  color: var(--tech-primary) !important;  padding: 2px 6px !important;  border-radius: 3px !important;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/js/tech-effects.js"/>
       <url>/js/tech-effects.js</url>
       
         <content type="html"><![CDATA[// 粒子背景效果document.addEventListener('DOMContentLoaded', function() {  // 只在首页显示粒子背景  if (document.getElementById('page-header')) {    particlesJS('page-header', {      particles: {        number: { value: 80, density: { enable: true, value_area: 800 } },        color: { value: "#00f5ff" },        shape: { type: "circle" },        opacity: { value: 0.5, random: true },        size: { value: 3, random: true },        line_linked: {          enable: true,          distance: 150,          color: "#00f5ff",          opacity: 0.4,          width: 1        },        move: { enable: true, speed: 2, direction: "none", random: true }      },      interactivity: {        detect_on: "canvas",        events: {          onhover: { enable: true, mode: "repulse" },          onclick: { enable: true, mode: "push" }        }      }    });  }  // 打字机效果  const typedElements = document.querySelectorAll('.typed-text');  typedElements.forEach(el => {    const text = el.textContent;    el.textContent = '';    let i = 0;    const typing = setInterval(() => {      if (i < text.length) {        el.textContent += text.charAt(i);        i++;      } else {        clearInterval(typing);      }    }, 100);  });});]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" href="../lib/album/ins.css"><link rel="stylesheet" href="../lib/album/photoswipe.css"> <link rel="stylesheet" href="../lib/album/default-skin/default-skin.css"> <div class="photos-btn-wrap">  <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Photos</a></div><div class="instagram itemscope">  <a href="https://tiandongpo.github.io/" target="_blank" class="open-ins">图片正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {        loadScript('../lib/album/ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
@@ -379,8 +368,8 @@
     
     <entry>
       <title></title>
-      <link href="/pdf/index.html"/>
-      <url>/pdf/index.html</url>
+      <link href="/me/index.html"/>
+      <url>/me/index.html</url>
       
         <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
       
@@ -389,11 +378,11 @@
     
     
     <entry>
-      <title></title>
-      <link href="/me/index.html"/>
-      <url>/me/index.html</url>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
       
-        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="../lib/album/ins.css"><link rel="stylesheet" href="../lib/album/photoswipe.css"> <link rel="stylesheet" href="../lib/album/default-skin/default-skin.css"> <div class="photos-btn-wrap">  <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Photos</a></div><div class="instagram itemscope">  <a href="https://tiandongpo.github.io/" target="_blank" class="open-ins">图片正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {        loadScript('../lib/album/ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
@@ -405,6 +394,17 @@
       <url>/portfolio/index.html</url>
       
         <content type="html"><![CDATA[<h1>🎯 我的作品集</h1><blockquote><p>这里展示了我精心挑选的技术项目和创作成果，每个项目都凝聚了我的心血和技术思考。</p></blockquote><h2 id="🚀-精选项目">🚀 精选项目</h2><h3 id="1-优惠卷计算师">1. 优惠卷计算师</h3><p><strong>项目周期</strong>: 2025.11.06 - 2025.11.09<br><strong>技术栈</strong>: css + qt + c++<br><strong>项目状态</strong>: 🟢 活跃维护</p><p><strong>项目描述</strong>:<br>根据超市发放的各种折扣卷的数量，和客户购买的商品的总价格输出打折后的价格及使用的优惠卷总数。</p><p><strong>核心功能</strong>:</p><ul><li>🤖 可编辑折扣卷数量</li><li>🔍 自定义顾客数和商品打折前总价</li><li>📊 时尚潮流的I</li></ul><p><strong>技术亮点</strong>:</p><ul><li>QT Desinger实现Figma效果</li><li>折扣算法准确度</li><li>程序精简运行方便</li></ul><p><strong>项目链接</strong>:</p><ul><li><a href="https://tiandongpo.github.io/2025/11/09/%E4%BC%98%E6%83%A0%E5%8D%B7%E8%AE%A1%E7%AE%97%E5%B8%88%E8%BD%AF%E4%BB%B6%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C(%E5%9B%9B)/">在线演示</a></li></ul>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/pdf/index.html"/>
+      <url>/pdf/index.html</url>
+      
+        <content type="html"><![CDATA[<embed src="/PdfFile/JustDoitNow.pdf" width="100%" height="600px" type="application/pdf">]]></content>
       
     </entry>
     
